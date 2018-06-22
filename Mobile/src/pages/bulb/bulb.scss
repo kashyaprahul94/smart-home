@@ -1,0 +1,43 @@
+page-bulb {
+
+  $background-color: #000000;
+  $foreground-color: #ffffff;
+
+  background: $background-color;
+  color: $foreground-color;
+
+  .content {
+    background: inherit !important;
+    color: inherit !important;
+  }
+
+  .thumb {
+    background-size: cover;
+    width: 300px;
+    height: 480px;
+    background-position: 0px 0px;
+    background-image: url( "../assets/images/light_bulb.png" );
+    background-repeat: no-repeat;
+    margin: auto;
+
+    &.active {
+      background-position: -343px 0px;
+    }
+  }
+
+  .transparent-item {
+    background: $background-color;
+    color: $foreground-color;
+  }
+
+  .item-label {
+    font-size: 2.0rem;
+  }
+  .item-value {
+    input {
+      width: 100%;
+      padding: 10px 5px;
+      border: 1px solid #555555;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <span>Smart Home</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6 center text-center>
+                <ion-card (click)="gotoBulb();">
+                    <img src="assets/images/bulb.png"/>
+                    <ion-card-content>
+                        <ion-card-title>
+                            Studio
+                        </ion-card-title>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col col-6 center text-center>
+                <ion-card padding="">
+                    <img src="assets/images/tv.png"/>
+                    <ion-card-content>
+                        <ion-card-title>
+                            Television
+                        </ion-card-title>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

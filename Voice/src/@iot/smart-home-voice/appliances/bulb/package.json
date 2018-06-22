@@ -1,0 +1,17 @@
+{
+  "name": "smart-home-voice-bulb",
+  "description": "Smart Home Voice - Bulb",
+  "version": "1.0.0",
+  "author": "kashyaprahul94@gmail.com",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "alexa": {
+    "applicationId": "amzn1.ask.skill.59838f4c-56b1-425e-a940-4a53fc440319"
+  },
+  "dependencies": {
+    "alexa-app": "^4.2.1"
+  }
+}

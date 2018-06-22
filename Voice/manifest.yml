@@ -1,0 +1,9 @@
+---
+applications:
+- name: smart-home-voice
+  host: smart-home
+  memory: 512M
+  disk_quota: 512M
+  instances: 1
+  buildpack: https://github.com/heroku/heroku-buildpack-nodejs.git
+  command: npm run-script start

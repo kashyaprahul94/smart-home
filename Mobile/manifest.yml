@@ -1,0 +1,8 @@
+---
+applications:
+- name: smart-home-mobile
+  host: smart-home-mobile
+  memory: 512M
+  disk_quota: 512M
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git

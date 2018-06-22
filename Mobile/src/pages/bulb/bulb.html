@@ -1,0 +1,37 @@
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12 text-center="">
+                <ion-row padding="">
+                    <ion-col col-12 text-left="">
+                        <div class="item-value">
+                            <input
+                                    [(colorPicker)]="currentColor"
+                                    [style.background]="currentColor"
+                                    [cpDisableInput]="false"
+                                    [cpPosition]="'bottom'"
+                                    [cpOKButton]="true"
+                                    (colorPickerSelect)="onColorChange();"
+                            />
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+            <ion-col col-12 text-center="">
+                <div class="thumb" [ngClass]="{ active: bulbState }" (click)="toggleBulbState();"></div>
+            </ion-col>
+            <ion-col col-12 text-center="">
+                <ion-item class="transparent-item">
+                    <ion-label>Auto Birghtness</ion-label>
+                    <ion-toggle [(ngModel)]="autoBrightness" (ionChange)="toggleAutoBrightnesState();"></ion-toggle>
+                </ion-item>
+            </ion-col>
+            <ion-col col-12 text-center="">
+                <ion-range [(ngModel)]="brightness" [disabled]="!bulbState || autoBrightness" [pin]="true" [min]="0" [max]="100" [debounce]="100" (ionChange)="brightnessValueChanged();" >
+                    <ion-icon range-left small name="sunny"></ion-icon>
+                    <ion-icon range-right name="sunny"></ion-icon>
+                </ion-range>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
